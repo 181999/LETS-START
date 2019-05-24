@@ -29,7 +29,7 @@ int output(int p)
 }
 int main()
 {
-        int a[10],n,s,p;
+        int a[10],n,p;
         input(a,&n);
         p=add(a,n);
         output(p);
