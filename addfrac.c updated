@@ -1,0 +1,37 @@
+#include<stdio.h>
+struct fract
+{
+        int n,d;
+};
+int input(struct fract* a,struct fract* b)
+{
+        printf("Enter the first fraction \n");
+        scanf("%d/%d",&a->n,&a->d);
+        printf("Enter the second fraction \n");
+        scanf("%d/%d",&b->n,&b->d);
+}
+int add(struct fract a,struct fract b,int* num,int* den)
+{
+        if(a.d==b.d)
+        {
+                *num=a.n+b.n;
+                *den=b.d;
+        }
+        else
+        {
+                *num=(a.n*b.d)+(b.n*a.d);
+                *den=(a.d*b.d);
+        }
+}
+int output(int num,int den)
+{
+        printf("\nAnswer =  %d/%d",num,den);
+}
+int main()
+{
+        struct fract a,b;
+        int num,den;
+        input(&a,&b);
+        add(a,b,&num,&den);
+        output(num,den);
+}
