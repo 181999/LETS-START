@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+        int n1,n2,d1,d2,n,d;
+        printf("Enther the num1 and den1 \n");
+        scanf("%d%d",&n1,&d1);
+        printf("Enter num2 and den2 \n");
+        scanf("%d%d",&n2,&d2);
+        if(d1==d2)
+        {
+                n=n1+n2;
+                d=d1;
+                printf("THE fraction is %d/%d",n,d);
+        }
+        else
+        {
+                n=(n1*d2)+(n2*d1);
+                d=d1*d2;
+                printf("the fraction = %d/%d",n,d);
+        }
+}
